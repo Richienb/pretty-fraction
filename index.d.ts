@@ -1,15 +1,20 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Format a fraction as a string.
+@param fraction The numerator and denominator of the fraction.
 @example
 ```
-const theModule = require("the-module");
+const prettyFraction = require("pretty-fraction");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+prettyFraction([1, 2]);
+//=> "½"
+
+prettyFraction([3, 4]);
+//=> "¾"
+
+prettyFraction([3, 50]);
+//=> "³/₅₀"
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function prettyFraction(fraction: [number, number]): string
 
-export = theModule
+export = prettyFraction

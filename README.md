@@ -1,41 +1,42 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# pretty-fraction [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/pretty-fraction/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/pretty-fraction)
 
-My awesome module.
+Format a fraction as a string.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/pretty-fraction.png)](https://npmjs.com/package/pretty-fraction)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install pretty-fraction
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const prettyFraction = require("pretty-fraction");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+prettyFraction([1, 2]);
+//=> "½"
+
+prettyFraction([3, 4]);
+//=> "¾"
+
+prettyFraction([3, 50]);
+//=> "³/₅₀"
 ```
 
 ## API
 
-### theModule(input, options?)
+### prettyFraction([numerator, denominator])
 
-#### input
+#### numerator
 
-Type: `string`
+Type: `integer`
 
-Lorem ipsum.
+The numerator of the fraction.
 
-#### options
+#### denominator
 
-Type: `object`
+Type: `integer`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The denominator of the fraction.

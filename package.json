@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "pretty-fraction",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Format a fraction as a string.",
+	"repository": "https://github.com/Richienb/pretty-fraction.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,20 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"fraction",
+		"math",
+		"pretty",
+		"format",
+		"display",
+		"string",
+		"array",
+		"number",
+		"integer"
+	],
+	"dependencies": {
+		"script-case": "^1.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.8.1",
 		"eslint-config-richienb": "^0.4.2",
