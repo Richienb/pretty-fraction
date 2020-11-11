@@ -34,9 +34,5 @@ module.exports = ([numerator, denominator]) => {
 	assertInteger(numerator)
 	assertInteger(denominator)
 
-	if (fractionSymbols.has(`${numerator}/${denominator}`)) {
-		return fractionSymbols.get(`${numerator}/${denominator}`)
-	}
-
-	return `${scriptCase.superscript(numerator.toString())}/${scriptCase.subscript(denominator.toString())}`
+	return fractionSymbols.get(`${numerator}/${denominator}`) || `${scriptCase.superscript(numerator.toString())}/${scriptCase.subscript(denominator.toString())}`
 }
